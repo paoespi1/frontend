@@ -2,43 +2,48 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {useState} from "react";
 
-const URL = 'https://proynivelacion.onrender.com/api/tareas';
-const CompAgregarTareas = () => {
+const URL = 'https://proynivelacion.onrender.com/api/proveedores';
+const CompAgregarProveedores = () => {
   
-  const [nombre, setNombre] = useState('')
-  const [responsable, setresponsable] = useState('')
-  const [fecha, setfecha] = useState('')
-  const [comentarios, setComentarios] = useState('')
+  const [razonsocial, setrazonsocial] = useState('')
+  const [numerodeidentificacion, setnumerodeidentificacion] = useState('')
+  const [telefono, settelefono] = useState('')
+  const [direccion, setdireccion] = useState('')
+  const [correoelectronico, setcorreoelectronico] = useState('')
   const navigate = useNavigate();
 
   //fucion guardar
-  const guardarTarea = async (e) => {
+  const guardarProveedor = async (e) => {
     e.preventDefault()
     await axios.post(URL, {
-      nombre:nombre, responsable:responsable, fecha:fecha, comentarios:comentarios
+      razonsocial:razonsocial, numerodeidentificacion:numerodeidentificacion, telefono:telefono, direccion:direccion, correoelectronico:correoelectronico
     })
-    navigate('/tareas')
+    navigate('/proveedores')
   }
 
   return (
     <div>
-    <h3>Formulario guardar Tareas</h3>   
-    <form onSubmit={guardarTarea}>
+    <h3>Formulario Agregar Proveedores</h3>   
+    <form onSubmit={guardarProveedor}>
       <div className='mb-3'>
         <label className='form-label'>Nombre</label>
-        <input type="text" value={nombre} onChange={(e)=>setNombre(e.target.value)} className='from-control' />
+        <input type="text" value={razonsocial} onChange={(e)=>setrazonsocial(e.target.value)} className='form-control' />
       </div>
       <div className='mb-3'>
-        <label className='form-label'>Responsable</label>
-        <input type="text" value={responsable} onChange={(e)=>setresponsable(e.target.value)} className='from-control' />
+        <label className='form-label'>Numero de Identificacion</label>
+        <input type="text" value={numerodeidentificacion} onChange={(e)=>setnumerodeidentificacion(e.target.value)} className='form-control' />
       </div>
       <div className='mb-3'>
-        <label className='form-label'>Fecha</label>
-        <input type="date" value={fecha} onChange={(e)=>setfecha(e.target.value)} className='from-control' />
+        <label className='form-label'>Telefono</label>
+        <input type="text" value={telefono} onChange={(e)=>settelefono(e.target.value)} className='form-control' />
       </div>
       <div className='mb-3'>
-        <label className='form-label'>Comentarios</label>
-        <input type="text" value={comentarios} onChange={(e)=>setComentarios(e.target.value)} className='from-control' />
+        <label className='form-label'>Direccion</label>
+        <input type="text" value={direccion} onChange={(e)=>setdireccion(e.target.value)} className='form-control' />
+      </div>
+      <div className='mb-3'>
+        <label className='form-label'>Correo Electronico</label>
+        <input type="text" value={correoelectronico} onChange={(e)=>setcorreoelectronico(e.target.value)} className='form-control' />
       </div>
       <button type='submit' className='btn btn-primary'>Guardar</button>
     </form>
@@ -46,4 +51,4 @@ const CompAgregarTareas = () => {
   )
 }
 
-export default CompAgregarTareas
+export default CompAgregarProveedores

@@ -9,9 +9,9 @@ const MenuC = () => {
         <span className='fs-4'>WebSite</span>
         </a>
         <ul className='nav nav-pills'>
-            <li className='nav-item'> <a href="/" className='=nav-link'>Inicio </a></li>
-            <li className='nav-item'> <a href="/tareas" className='=nav-link'> Tareas </a></li>
-            <li className='nav-item'> <a href="/proveedores" className='=nav-link'> Proveedores </a></li>
+            <li className='nav-item'> <a href="/" className='nav-link'>Inicio </a></li>
+            <li className='nav-item'> <a href="/tareas" className='nav-link'> Tareas </a></li>
+            <li className='nav-item'> <a href="/proveedores" className='nav-link'> Proveedores </a></li>
         </ul>
       </nav>
       

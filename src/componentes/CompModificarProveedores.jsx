@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import {useState, useEffect} from "react";
 
-const URL = 'https://proynivelacion.onrender.com/api/proveedores';
+const URL = 'https://proynivelacion.onrender.com/api/proveedores/';
 const CompModificarProveedores = () => {
   
   const [razonsocial, setrazonsocial] = useState('')
@@ -36,7 +36,7 @@ const CompModificarProveedores = () => {
 
   return (
     <div>
-    <h3>Formulario guardar Tareas</h3>   
+    <h3>Formulario Editar Proveedores</h3>   
     <form onSubmit={modificarProveedor}>
       <div className='mb-3'>
         <label className='form-label'>Razon Social</label>

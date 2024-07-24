@@ -24,6 +24,7 @@ const CompMostrarTareas = () => {
 
     return (
         <div className='container'>
+            <h3>Tareas</h3>   
             <div className='row'>
                 <div className='col'>
                     <Link to='/tareas/agregar' className='btn btn-primary mt-2 mb-2'>
@@ -32,10 +33,10 @@ const CompMostrarTareas = () => {
                     <table className='table'>
                         <thead className='tablethebg'>
                             <tr>
-                                <th>nombre</th>
-                                <th>responsable</th>
-                                <th>fecha</th>
-                                <th>comentarios</th>
+                                <th>Nombre</th>
+                                <th>Responsable</th>
+                                <th>Fecha</th>
+                                <th>Comentarios</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>

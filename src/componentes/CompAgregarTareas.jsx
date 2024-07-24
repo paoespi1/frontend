@@ -22,7 +22,7 @@ const CompAgregarTareas = () => {
 
   return (
     <div>
-    <h3>Formulario guardar Tareas</h3>   
+    <h3>Formulario Guardar Tareas</h3>   
     <form onSubmit={guardarTarea}>
       <div className='mb-3'>
         <label className='form-label'>Nombre</label>

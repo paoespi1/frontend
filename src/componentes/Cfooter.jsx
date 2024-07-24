@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import redes from ''
+import redes from '../imagenes/redes.png'
 const Cfooter = () => {
   return (
     <div>
